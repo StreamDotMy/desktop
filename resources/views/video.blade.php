@@ -37,7 +37,7 @@
         </div>
         <div class="modal-body">
           <video id="my-video" class="video-js video-modal" controls preload="video-js vjs-default-skin vjs-big-play-centered" poster="poster.png" data-setup='{}' autoplay="false">
-        <source src="/storage/{{$video->id }}/source.mp4" type='video/mp4'>
+        <source src="/storage/{{$video->id }}/raw/source.mp4" type='video/mp4'>
 
       </video>
         </div>
