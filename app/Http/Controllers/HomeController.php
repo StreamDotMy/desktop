@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index(){
 		
-		$videos = Video::where([['video_category_id','=',4]])
+		$videos = Video::where([['video_category_id','=',1]])
 					->orderBy('id','DESC')
 					->skip(0)
 					->take(10)
