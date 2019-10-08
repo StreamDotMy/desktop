@@ -66,6 +66,7 @@
 		@endforeach	
       
         </section>
+		@include('partials.contents')
     </div>
 
  
