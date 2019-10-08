@@ -19,7 +19,7 @@
    
 
         <div class="video-bg">
-        <video class="main-video"  poster="/storage/{{$video->id }}/image/image2.jpg"  autoplay="false" metadata muted="true" playsinline></video>
+        <video class="main-video"  poster="/storage/{{$video->id }}/image/image2.jpg" metadata muted="true" playsinline></video>
         <div class="play-icon">
             <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><img src="/assets/play-icon.png"></button>
         </div>
@@ -36,7 +36,7 @@
           <h4 class="modal-title"></h4>
         </div>
         <div class="modal-body">
-          <video id="my-video" class="video-js video-modal" controls preload="video-js vjs-default-skin vjs-big-play-centered" poster="poster.png" data-setup='{}' autoplay="false">
+          <video id="my-video" class="video-js video-modal" controls preload="video-js vjs-default-skin vjs-big-play-centered" poster="poster.png" data-setup='{}' >
         <source src="/storage/{{$video->id }}/raw/source.mp4" type='video/mp4'>
 
       </video>
