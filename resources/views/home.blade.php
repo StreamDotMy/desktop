@@ -60,7 +60,7 @@
 		@foreach($videos as $key => $value)
             <div>
 				<a href="{{ route('play', $value->id) }}">
-                <img src="http://127.0.0.1/admin/storage/app/public/videos/{{$value->id }}/image/image1.jpg">
+                <img src="/storage/{{$value->id }}/image/image1.jpg">
 				</a>
             </div>
 		@endforeach	
