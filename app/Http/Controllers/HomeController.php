@@ -11,12 +11,18 @@ class HomeController extends Controller
     public function index(){
 		
 		$videos = Video::where([['video_category_id','=',1]])
-					->orderBy('id','DESC')
+					->orderBy('ordering','ASC')
 					->skip(0)
 					->take(10)
 					->get();
+
+		$continue =  Video::where([['video_category_id','=',3]])
+			 ->orderBy('ordering','ASC')
+			 ->skip(0)
+			 ->take(10)
+			 ->get();
 		
-        return view('home')->with(compact('videos'));
+        return view('home')->with(compact('videos','continue'));
     }
 	
 	public function play($id){

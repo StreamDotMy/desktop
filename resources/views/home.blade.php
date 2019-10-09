@@ -50,7 +50,7 @@
         <img class="mob-line" src="assets/curved-mob.png">
     </div>
 
-        <div class="categories">
+    <div class="categories">
         <div class="titles">
             <h3>IM Originals</h3>
         </div>
@@ -59,15 +59,33 @@
 		
 		@foreach($videos as $key => $value)
             <div>
-				<a href="{{ route('play', $value->id) }}">
-                <img src="/storage/{{$value->id }}/image/image1.jpg">
-				</a>
+		<a href="{{ route('play', $value->id) }}">
+               	<img src="/storage/{{$value->id }}/image/image1.jpg">
+		</a>
             </div>
 		@endforeach	
       
         </section>
-		@include('partials.contents')
+    
+
+        <div class="titles">
+            <h3>Continue Watching</h3>
+        </div>
+
+        <section class="regular slider">
+
+                @foreach($continue as $k => $v)
+            <div>
+                <a href="{{ route('play', $v->id) }}">
+                <img src="/storage/{{$v->id }}/image/image1.jpg">
+                </a>
+            </div>
+                @endforeach
+
+        </section>
     </div>
+
+    @include('partials.contents')
 
  
     @endsection
