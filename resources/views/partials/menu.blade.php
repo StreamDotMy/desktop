@@ -1,86 +1,47 @@
-<div class="search-box">
-        <input class="search-txt" type="text" name=" " placeholder="Type to search"> </input>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-slide-dropdown">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-slide-dropdown">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">HOME</a></li>
+            <li><a href="#">IM ORIGINALS</a></li>
+            <li><div><a class="logo-link" href="/signup"><img src="/assets/logo.png"></a></div></li>
+            <li><a href="#">FRESH</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">GENRE <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <div class="dropdown-arrow"></div>
+                <li><a href="#">ACTION/ADVENTURE</a></li>
+                <li><a href="#">COMEDY</a></li>
+                <li><a href="#">DRAMA</a></li>
+                <li><a href="#">DOCUMENTRARY</a></li>
+                <li><a href="#">HORROR/THRILLER</a></li>
+                <li><a href="#">ROMANCE</a></li>
+              </ul>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <form class="navbar-form navbar-left" role="search">
+            <div class="search-box">
+        <input class="search-txt" type="text" name=" " placeholder="Type to search"></input>
         <a href="#" class="search-btn">
-            <!--font-awesome-->
             <i class="fa fa-search fa-2x"></i>
         </a>
     </div>
-    <div class="logo">
-        <a href="../signup"><img src="assets/logo.png"></a>
-    </div>
-    <input id="burger" type="checkbox" />
+        </form>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
-    <label class="burger-spans" for="burger">
-        <span class="first"></span>
-        <span class="second"></span>
-        <span class="third"></span>
-    </label>
-
-    <nav>
-        <div class="menu-details">
-            <div class="col-md-12 manage-details-bg">
-                <div class="col-md-8 edit-profile">
-                    <i class="fa fa-pencil fa-2x"></i>
-                    <span>Manage Profile</span>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="notification">
-                    <i class="fa fa-bell fa-2x"></i>
-                    <span>Notifications</span>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="vid-notif">
-                    <img src="assets/menu-vid1.png">
-                </div>
-                <div class="txt-notif">
-                    <h3>Downloaded</h3>
-                    <h5>Your video is successfully downloaded. 12.03 PM</h5>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="vid-notif">
-                    <img src="assets/menu-vid2.png">
-                </div>
-                <div class="txt-notif">
-                    <h3>New Arrival</h3>
-                    <h5>CiptaAsia Original : Hentian 10.35 AM</h5>
-                </div>
-            </div>
-
-            <div class="col-md-12 mylist-border">
-                <div class="my-list">
-                    <i class="fa fa-check fa-2x"></i>
-                    <span>My List</span>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="notification">
-                    <span>App Setting</span>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="notification">
-                    <span>Account</span>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="notification">
-                    <span>Help</span>
-                </div>
-            </div>
-
-            <div class="col-md-12">
-                <div class="notification">
-                    <span>Sign out</span>
-                </div>
-            </div>
-
-        </div>
-    </nav>
