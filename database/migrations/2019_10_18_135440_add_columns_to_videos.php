@@ -21,8 +21,8 @@ class AddColumnsToVideos extends Migration
             $table->string('duration')->nullable();
             $table->string('year_of_release')->nullable();
             $table->string('classification')->nullable();
-            $table->datetime('start_date');
-            $table->datetime('end_date');
+            $table->datetime('start_date')->nullable();
+            $table->datetime('end_date')->nullable();
 
 
         });
