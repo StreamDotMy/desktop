@@ -54,9 +54,9 @@
                         </div>
 
                     </form>
-                    <div class="fb-login">
+                    {{-- <div class="fb-login">
                         <img class="fb-login-icon" src="assets/fb.png"><span>Login with Facebook</span>
-                    </div>
+                    </div> --}}
                     <div class="new-to-insight">New to Insight Malaysia? <a href="signup.php">Sign up now.</a></div>
                 </div>
             </div>

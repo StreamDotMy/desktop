@@ -3,11 +3,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Video;
+use View;
+use App\VideoCategory;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {
+
+
+    public function __construct(){
+        $categories = VideoCategory::all();
+        View::share ( compact('categories' ));
+    }
+
+
     public function index(){
 		
 		$videos = Video::where([['video_category_id','=',1]])
@@ -31,4 +41,9 @@ class HomeController extends Controller
 		 $video = Video::findOrFail($id);
 		 return view('video')->with(compact('video'));
 	}
+
+
+    public function signup(){
+        return view('signup');
+    }
 }

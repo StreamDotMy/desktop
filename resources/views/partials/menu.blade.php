@@ -16,17 +16,14 @@
             <li class="active"><a href="/">HOME</a></li>
             <li><a href="#">IM ORIGINALS</a></li>
             <li><div><a class="logo-link" href="/signup"><img src="/assets/logo.png"></a></div></li>
-            <li><a href="#">FRESH</a></li>
+            <li><a href="/signup">SIGNUP</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">GENRE <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <div class="dropdown-arrow"></div>
-                <li><a href="#">ACTION/ADVENTURE</a></li>
-                <li><a href="#">COMEDY</a></li>
-                <li><a href="#">DRAMA</a></li>
-                <li><a href="#">DOCUMENTRARY</a></li>
-                <li><a href="#">HORROR/THRILLER</a></li>
-                <li><a href="#">ROMANCE</a></li>
+                @foreach($categories as $category)
+                    <li><a href="#"> {{ $category->title }}</a></li>
+                @endforeach
               </ul>
             </li>
         </ul>

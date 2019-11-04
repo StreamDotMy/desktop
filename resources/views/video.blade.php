@@ -58,6 +58,7 @@
     <div class="col-md-12 col-sm-12 movie-summary">
         <h1 class="summary">Summary</h1>
         <p>{{ $video->description }}</p>
+{{--
         <div class="col-md-12 summary-icons">
             <div class="col-md-3 col-sm-3">
                 <i class="fa fa-plus"></i>
@@ -76,6 +77,8 @@
                 <h4>Download</h4>
             </div>
         </div>
+
+--}}
     </div>
 
     <div class="categories">

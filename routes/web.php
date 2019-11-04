@@ -19,6 +19,10 @@ Route::get('/', 'HomeController@index');
 
 
 Route::get('/play/{id}', 'HomeController@play')->name('play');
+Route::get('/signup',    'HomeController@signup')->name('signup');
+
+
+
 Route::get('/video', function () {
     return view('video');
 });
