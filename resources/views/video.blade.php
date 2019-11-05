@@ -12,8 +12,8 @@
         {{--
         <video class="main-video" src="/videos/mystical.mp4" autoplay="true" metadata muted="true" playsinline></video>
         --}}
-        @if( file_exists("/var/www/html/desktop/public/storage/$video->id/image/image3.jpg"))
-            <img src="/storage/{{$video->id }}/image/image3.jpg" class="video-posters" />
+        @if( file_exists("/var/www/html/desktop/public/storage/$video->id/image/image2.jpg"))
+            <img src="/storage/{{$video->id }}/image/image2.jpg" class="video-posters" />
         @else
             <img src="https://via.placeholder.com/1920x1080?text=Poster+Placeholder" class="video-posters" />
         @endif
