@@ -11,8 +11,12 @@
     <div class="video-bg">
         {{--
         <video class="main-video" src="/videos/mystical.mp4" autoplay="true" metadata muted="true" playsinline></video>
---}}
-        <img src="/assets/homeposters/amukan.jpg" class="video-posters" />
+        --}}
+        @if( file_exists("/var/www/html/desktop/public/storage/$video->id/image/image3.jpg"))
+            <img src="/storage/{{$video->id }}/image/image3.jpg" class="video-posters" />
+        @else
+            <img src="https://via.placeholder.com/1920x1080?text=Poster+Placeholder" class="video-posters" />
+        @endif
 
         <div class="play-icon">
             <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><img src="/assets/play-icon.png"></button>
