@@ -1,16 +1,31 @@
 @font-face {
-    font-family: FuturaNew;
+    font-family: FuturaNewBook;
     src: url("FuturaNewBook.otf");
 }
-
 @font-face {
     font-family: FuturaNewBold;
     src: url("FuturaNewBold.otf");
 }
+@font-face {
+    font-family: FuturaNewDemi;
+    src: url("FuturaNewDemi.otf");
+}
+@font-face {
+    font-family: FuturaNewMedium;
+    src: url("FuturaNewMedium.otf");
+}
+@font-face {
+    font-family: MyriadPro-Bold;
+    src: url("MyriadPro-Bold.otf");
+}
+@font-face {
+    font-family: MyriadProRegular;
+    src: url("MyriadProRegular.otf");
+}
 
 body {
     background: #efefef;
-    font-family: FuturaNew !important;
+    font-family: FuturaNewBook !important;
 }
 
 .landingpage {
@@ -192,15 +207,29 @@ body input:checked~nav>div {
 }
 /* End of Modal Video*/
 
-
+.carousel-control {
+    width: 10% !important;
+}
+.glyphicon-chevron-right,
+.glyphicon-chevron-left {
+    color: #f2bc44 !important;
+}
 /* Menu */
 .navbar-nav {
-    float: none !important;
-    max-width: 700px !important;
-    margin: auto !important;
-    padding-top: 15px !important;
+    padding: 15px 0 0 0 !important;
 }
-
+.navbar-collapse {
+    padding: 0px !important;
+}
+.navbar-toggle {
+    margin-right: 20px !important;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: black !important;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white !important;;
+}
 .navbar-default {
     position: fixed !important;
     background: #0000001a !important;
@@ -214,6 +243,7 @@ body input:checked~nav>div {
 
 .navbar-default .container {
     height: 70px;
+    padding: 0px !important;
     width: 90% !important;
 }
 
@@ -223,7 +253,7 @@ body input:checked~nav>div {
     font-size: 16px;
     font-family: FuturaNewBold;
     font-weight: bold;
-    padding: 10px 40px !important;
+    padding: 10px 25px !important;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -247,7 +277,7 @@ body input:checked~nav>div {
 .dropdown-menu {
     background-color: #f2bc44 !important;
     border: 0px !important;
-    margin: 0 0 0 40px !important;
+    margin: 0 0 0 38px !important;
 }
 .dropdown-arrow {
     position: absolute;
@@ -335,18 +365,17 @@ body input:checked~nav>div {
 .txt-notif h5 {
     color: white
 }
-/* End of Menu */
-
-
-/* Search form */
 .search-box {
     position: absolute;
-    padding: 10px;
+    padding: 0 10px;
     z-index: 9;
     right: 5%;
     top: 5px;
+    width: 270px;
 }
-
+.search-box a {
+    float: right;
+}
 .search-box:hover>.search-txt {
     width: 220px;
     padding: 0 6px;
@@ -358,8 +387,8 @@ body input:checked~nav>div {
     border-radius: 5px;
     outline: none;
     font-size: 16px;
+    padding: 6px 30px !important;
     transition: 0.4s;
-    line-height: 40px;
     display: none;
 }
 
@@ -367,7 +396,109 @@ body input:checked~nav>div {
     color: white
 }
 
-/* End of Search */
+.login-btn {
+    background: transparent;
+    border: 1px solid #f2bc44 !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-family: FuturaNewBold;
+    margin-top: 5px;
+    outline: none !important;
+    padding: 2px 25px !important;
+}
+/* End of Menu */
+
+/*  Login Modal */
+.login-modal {
+    width: 975px !important;
+    margin: auto !important;
+    top: 15% !important;
+}
+.modal-body {
+    display: table;
+}
+.login-sec {
+    background: black;
+    color: white;
+    padding: 50px !important;
+}
+.username-sec,
+.password-sec {
+    background: white;
+    color: black;
+    border-radius: 5px;
+    margin: 20px 0  !important;
+    padding: 10px !important;
+}
+.username-sec p,
+.password-sec p {
+    color: black;
+    font-family: FuturaNewBook;
+    font-size: 14px;
+}
+.registration-sec {
+    background: white;
+    color: black;
+    padding: 50px !important;
+}
+.registration-title {
+    color: black;
+    font-family: FuturaNewBold;
+    font-size: 53px;
+    line-height: 1;
+}
+.registration-desc {
+    color: #808080;
+    font-family: FuturaNewMedium;
+    font-size: 21px;
+}
+.form-control {
+    background: transparent;
+    border: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+::placeholder,
+.form-control  {
+    color: black !important;
+    font-family: FuturaNewBold;
+    font-size: 14px;
+}
+.login,
+.register {
+    width: 100%;
+    outline: none;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: FuturaNewBold;
+    padding: 15px;
+    margin-top: 25px;
+}
+.login {
+    background: #f2bc44;
+    color: black;
+}
+.register {
+    background: black;
+    color: #f2bc44;
+}
+.signin-title {
+    font-family: FuturaNewBold !important;
+    font-size: 21px;
+    margin: 0;
+    padding-bottom: 15px;
+}
+.remember-me {
+    padding-top: 10px;
+}
+.need-help {
+    color: white;
+    float: right;
+}
+/* End of Login Modal */
+
 #video-click img {
     border: 5px solid red
 }
@@ -528,9 +659,13 @@ body input:checked~nav>div {
     list-style: none
 }
 
-.footer li a,
-.copyright h4, p {
+.footer li a, p {
     color: white;
+    font-family: MyriadProRegular;
+}
+.copyright h4 {
+    color: white;
+    font-family: MyriadPro-Bold;
 }
 
 .copyright {
@@ -549,122 +684,22 @@ body input:checked~nav>div {
     display: none
 }
 
-/* Login Page */
-.login-bg {
-    background: linear-gradient(0deg, rgba(2, 0, 1, 0), rgba(6, 0, 4, 0.25)), url(../assets/main-bg.png);
-    height: 100vh;
-    background-position: center center;
-    width: 100%;
-}
-
-.login-form {
-    background: #ffffffde;
-    border-radius: 10px;
-    color: black;
-    padding: 50px;
-    width: 400px;
-}
-
-.form-horizontal .form-group {
-    margin: 0px !important;
-}
-
-.field-icon {
-    float: right;
-    margin-right: 5px;
-    margin-top: -25px;
-    position: relative;
-    z-index: 2;
-}
-
-.forgot-pass {
-    padding-top: 90px;
-}
-
-.forgot-pass p,
-.fb-login span,
-.new-to-insight a {
-    color: #3fa9f5;
-}
-
-.fb-login span {
-    font-style: italic;
-}
-
-.signin-btn button {
-    background: #f2bc44;
-    width: 100%;
-    font-size: 18px;
-    font-weight: bold;
-    outline: none;
-    border: 0px;
-    border-radius: 5px;
-    padding: 7px 0;
-    color: black;
-}
-
-.remember-me {
-    border-bottom: 1px solid #80808085;
-    padding: 10px 0
-}
-
-.fb-login-icon {
-    height: 20px;
-    margin: 10px 10px 10px 0;
-}
-
-.login-form h3 {
-    margin: 10px 0;
-    font-size: 16px;
-    font-family: FuturaNewBold !important;
-}
-
-.signin-title {
-    font-family: FuturaNewBold !important;
-    margin: 0;
-    padding-bottom: 15px;
-}
-
-input[type="checkbox"] {
-    background: red;
-}
-
-.slogan h1 {
-    color: white;
-    font-size: 100px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.login-logo {
-    text-align: center;
-}
-
-.login-logo img {
-    margin-top: 25px;
-}
-
-.slogan {
-    width: 400px;
-    float: right;
-    padding: 200px 50px 0 0;
-}
-/* End of login page */
-
-
 /* Video pages */
 .movie-type {
     padding: 0 5% 2% 5%;
 }
-
+.video-posters {
+    width: 100%;
+}
 .rating-border {
     -webkit-text-stroke: #f2bc44;
     -webkit-text-stroke-width: 1px;
 }
 
 .movie-type h1 {
-    font-family: FuturaNewBold !important;
-    font-size: 52px;
+    font-family: FuturaNewBold;
+    font-size: 62px;
+    color: black;
 }
 
 .date-time {
@@ -673,15 +708,17 @@ input[type="checkbox"] {
 
 .date-time .date {
     color: #666666;
-    font-size: 18px;
+    font-family: FuturaNewDemi;
+    font-size: 21px;
     padding: 0 5px;
 }
 
 .date-time .duration,
 .date-time .category {
     color: #666666;
-    font-size: 18px;
+    font-size: 21px;
     border-left: 3px solid #666666;
+    font-family: FuturaNewDemi;
     margin-left: 15px;
     padding: 0 5px;
 }
@@ -692,23 +729,35 @@ input[type="checkbox"] {
     padding: 5% !important;
 }
 
-.movie-summary p {
-    color: #666666;
+.synopsis {
+    color: black;
     float: left;
-    font-size: 19px;
+    font-size: 18px;
+    width: 50%;
 }
 
 .movie-summary i {
     color: #f2bc44;
     font-size: 27px;
 }
-
+.pages-route {
+    color: black;
+    width: 100%;
+    background: #fbfbfb;
+    border-radius: 5px;
+    font-family: FuturaNewDemi;
+    font-size: 21px;
+    padding: 8px 20px;
+}
+.video-name {
+    color: #f2bc44;
+}
 .summary {
+    color: black;
     font-family: FuturaNewBold !important;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 41px;
     float: left;
-    padding-bottom: 10px;
+    width: 100%;
 }
 
 .summary-icons {
@@ -775,9 +824,9 @@ input[type="checkbox"] {
     cursor: pointer;
     object-fit: fill;
     transition: transform .5s ease;
-    transform: scale(0.8);
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
 }
 
 @media only screen and (max-device-width: 1024px) {
@@ -806,6 +855,42 @@ input[type="checkbox"] {
 }
 
 @media only screen and (max-device-width: 480px) {
+    .dropdown-menu {
+        margin: 0px !important;
+    }
+    .dropdown-arrow {
+        display: none;
+    }
+    .dropdown-menu li {
+        text-align: center;
+    }.navbar .container {
+        width: 100% !important;
+        padding: 0px !important;
+    }
+    .search-box {
+        position: unset;
+    }
+    .navbar-collapse {
+        text-align: center;
+    }
+    .navbar-default {
+        height: 50px !important;
+    }
+    .navbar-right {
+        padding-top: 0px !important;
+    }
+    .navbar-form {
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    .navbar-default .navbar-form {
+        border: none !important;
+    }
+    .navbar-default .navbar-collapse {
+        background: black !important;
+        margin: 0px !important;
+        width: 100% !important;
+    }
     .slick-slide img {
         height: 180px;
     }

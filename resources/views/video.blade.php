@@ -9,7 +9,10 @@
     @include('partials.menu')
 
     <div class="video-bg">
+        {{--
         <video class="main-video" src="/videos/mystical.mp4" autoplay="true" metadata muted="true" playsinline></video>
+--}}
+        <img src="/assets/homeposters/amukan.jpg" class="video-posters" />
 
         <div class="play-icon">
             <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><img src="/assets/play-icon.png"></button>
@@ -27,14 +30,13 @@
                 <button type="button" class="video-close-btn" data-dismiss="modal" onclick="pauseVid()"><span class="x">&times;</span></button>
                 <div class="">
 
-                    <video id="gossVideo" class="embed-responsive-item video-js video-modal" controls preload="video-js vjs-default-skin vjs-big-play-centered"  poster="/storage/{{$video->id }}/image/image2.jpg" data-setup='{}'>
+                    <video id="gossVideo" class="embed-responsive-item video-js video-modal" controls preload="video-js vjs-default-skin vjs-big-play-centered" poster="" data-setup='{}'>
                         <source src="/storage/{{$video->id }}/raw/source.mp4" type='video/mp4'>
                     </video>
                 </div>
             </div>
         </div>
     </div>
-    <!--Video pop up -->
 
     <div class="curve-lines">
         <img class="desk-line" src="/assets/curved-desk.png">
@@ -44,23 +46,26 @@
     <div class="movie-type">
         <h1>{{ $video->title }}</h1>
         <div class="date-time">
-            <span class="date">2017</span>
-            <span class="duration">90 Minute</span>
+            <span class="date">{{ $video->year_of_release }}</span>
+            <span class="duration">{{ $video->duration }}</span>
             <span class="category">{{ $video->video_category->title }}</span>
         </div>
-        <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
+        {{-- <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
         <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
         <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
         <i class="fa fa-star fa-2x" style="color: #f2bc44"></i>
         <i class="fa fa-star fa-2x rating-border"></i>
-        <span class="movie-episode">PG13</span>
+        <span class="movie-episode">PG13</span> --}}
     </div>
-    <div class="col-md-12 col-sm-12 movie-summary">
+    <div class="col-md-12 col-sm-12 movie-summary ">
+        <div class="videopage-route">
+            <p class="pages-route">Home > {{ $video->video_category->title }}  > <span class="video-name">{{ $video->title }}</span></p>
+        </div>
+
         <h1 class="summary">Summary</h1>
-        <p>{{ $video->description }}</p>
-{{--
+        <p class="synopsis">{{ $video->description }}</p>
         <div class="col-md-12 summary-icons">
-            <div class="col-md-3 col-sm-3">
+            {{-- <div class="col-md-3 col-sm-3">
                 <i class="fa fa-plus"></i>
                 <h4>My List</h4>
             </div>
@@ -75,10 +80,8 @@
             <div class="col-md-3 col-sm-3">
                 <i class="fa fa-download"></i>
                 <h4>Download</h4>
-            </div>
+            </div> --}}
         </div>
-
---}}
     </div>
 
     <div class="categories">
@@ -87,34 +90,34 @@
         </div>
         <section class="regular slider">
             <div>
-                <img src="../assets/classics/Poster Film-70.jpg">
+                <img src="/assets/classics/Poster Film-70.jpg">
             </div>
             <div>
-                <img src="../assets/classics/Poster Film-72.jpg">
+                <img src="/assets/classics/Poster Film-72.jpg">
             </div>
             <div>
-                <img src="../assets/classics/Poster Film-73.jpg">
+                <img src="/assets/classics/Poster Film-73.jpg">
             </div>
             <div>
-                <img src="../assets/classics/Poster Film-80.jpg">
+                <img src="/assets/classics/Poster Film-80.jpg">
             </div>
             <div>
-                <img src="../assets/engaging/Poster Film-11.jpg">
+                <img src="/assets/engaging/Poster Film-11.jpg">
             </div>
             <div>
-                <img src="../assets/engaging/Poster Film-12.jpg">
+                <img src="/assets/engaging/Poster Film-12.jpg">
             </div>
             <div>
-                <img src="../assets/engaging/Poster Film-13.jpg">
+                <img src="/assets/engaging/Poster Film-13.jpg">
             </div>
             <div>
-                <img src="../assets/engaging/Poster Film-14.jpg">
+                <img src="/assets/engaging/Poster Film-14.jpg">
             </div>
             <div>
-                <img src="../assets/engaging/Poster Film-15.jpg">
+                <img src="/assets/engaging/Poster Film-15.jpg">
             </div>
             <div>
-                <img src="../assets/engaging/Poster Film-16.jpg">
+                <img src="/assets/engaging/Poster Film-16.jpg">
             </div>
         </section>
     </div>
@@ -126,34 +129,34 @@
 
         <section class="regular slider">
             <div>
-                <img src="../assets/popular/pop1.png">
+                <img src="/assets/popular/pop1.png">
             </div>
             <div>
-                <img src="../assets/popular/pop2.png">
+                <img src="/assets/popular/pop2.png">
             </div>
             <div>
-                <img src="../assets/popular/pop3.png">
+                <img src="/assets/popular/pop3.png">
             </div>
             <div>
-                <img src="../assets/popular/pop4.png">
+                <img src="/assets/popular/pop4.png">
             </div>
             <div>
-                <img src="../assets/popular/pop5.png">
+                <img src="/assets/popular/pop5.png">
             </div>
             <div>
-                <img src="../assets/spectacular/Poster Film-44.jpg">
+                <img src="/assets/spectacular/Poster Film-44.jpg">
             </div>
             <div>
-                <img src="../assets/spectacular/Poster Film-45.jpg">
+                <img src="/assets/spectacular/Poster Film-45.jpg">
             </div>
             <div>
-                <img src="../assets/spectacular/Poster Film-59.jpg">
+                <img src="/assets/spectacular/Poster Film-59.jpg">
             </div>
             <div>
-                <img src="../assets/spectacular/Poster Film-76.jpg">
+                <img src="/assets/spectacular/Poster Film-76.jpg">
             </div>
             <div>
-                <img src="../assets/spectacular/Poster Film-79.jpg">
+                <img src="/assets/spectacular/Poster Film-79.jpg">
             </div>
         </section>
     </div>
@@ -191,7 +194,7 @@
         </div>
         <div class="col-md-12 copyright">
             <h4>A Collaborative Effort with</h4>
-            <img class="rtm" src="../assets/rtm-finas.png">
+            <img class="rtm" src="/assets/rtm-finas.png">
             <p>© 2019 Insight Malaysia, All Right Reserved</p>
         </div>
     </div>
@@ -203,14 +206,14 @@
     <script>
         var vid = document.getElementById("gossVideo");
 
-        function playVid() {
-            vid.play();
-        }
+                function playVid() {
+                                vid.play();
+                                        }
 
-        function pauseVid() {
-            vid.pause();
-        }
-    </script>
+                function pauseVid() {
+                                vid.pause();
+                                        }
+            </script>
 
     @include('partials.scripts')
 
