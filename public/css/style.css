@@ -733,7 +733,6 @@ body input:checked~nav>div {
     color: black;
     float: left;
     font-size: 18px;
-    width: 50%;
 }
 
 .movie-summary i {

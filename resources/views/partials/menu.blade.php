@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse" id="bs-slide-dropdown">
         <ul class="nav navbar-nav">
             <li><div><a class="logo-link" href="/"><img src="/assets/logo.png"></a></div></li>
-            <li class="active"><a href="#">HOME</a></li>
+            <li class="active"><a href="/">HOME</a></li>
             <li><a href="#">IM ORIGINALS</a></li>
             <li><a href="#">FRESH</a></li>
             <li class="dropdown">
